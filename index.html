@@ -10,12 +10,12 @@
 		<header class="header">
 			<nav class="nav">
 			<div class="logo">
-				<h3>Logo</h3>
+				<h3>the simple blog</h3>
 			</div>
 				<ul>
 					<li><a href="#">Home</a></li>
-					<li><a href="#">Post</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="#">Create</a></li>
+					<li><a href="#">About</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -24,12 +24,58 @@
 	<!--	<div class="container">
 		
 	</div> -->
-		<div class="home-posts">
-			<div class="">
+		<div class="page">
+			<div class="row">	
 
+				<div class="filter-box">
+					 <button onclick="showDropdown()" class="dropdown-btn">Filter</button>
+					<div class="dropdown-content">
+
+
+						<a href="#">Sports</a>	
+						<a href="#">Tecnology</a>
+						<a href="#">Science</a>
+						<a href="#">Movies</a>
+					</div>
+				</div>
+				<!-- Filter here-->
+
+				<div class="search-box">
+					<input type="text" id="id_search" name="input" class="search-input" placeholder="Search">
+					<img class="search-img"src="images/lupa.svg"/>
+				</div>
 			</div>
 
+			<div class="post-list">
+				<div class="post-box">
+					<h4 class="post-title">Ethereum</h4>
+					<div class="content-box">
+						<p class="p-content">Ethereum é uma plataforma descentralizada capaz de executar contratos inteligentes e aplicações descentralizadas 
+						usando a tecnologia blockchain: São aplicações que funcionam exatamente como programadas sem qualquer possibilidade de censura, 
+						fraude ou interferência de terceiros, isso porque o contrato é imutável Ethereum é uma plataforma descentralizada capaz de executar contratos inteligentes e aplicações descentralizadaEthereum é uma plataforma descentralizada capaz de executar contratos inteligentes e aplicações descentralizadaEthereum é uma plataforma descentralizada capaz de executar contratos inteligentes e aplicações descentralizadaEthereum é uma plataforma descentralizada capaz de executar contratos inteligentes e aplicações descentralizada...</p>
+
+					</div>
+					<p class="p-date">16/02/2021</p>
+				</div>
+
+				<div class="post-box">
+
+				</div>
+
+				<div class="post-box">
+	
+				</div>
+
+				<div class="post-box">
+	
+				</div>
+
+				<div class="post-box">
+	
+				</div>
+			</div>
 		</div>
+	<script src="scripts/script.js"></script>
 	</body>
 </html>
 
