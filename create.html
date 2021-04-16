@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My Blog</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/create.css">
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	</head>
+
+	<body>
+		<header class="header">
+			<nav class="nav">
+			<div class="logo">
+				<h3>the simple blog</h3>
+			</div>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="create.html">Create</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="container">
+             
+			<form action="/create" method="POST">
+				<input type="text" name="title" placeholder="Title">
+				<textarea type="text" name="content" placeholder="Content"></textarea>
+				<input type="text" name="category" placeholder="Category">
+				<input type="text" name="author" placeholder="Author">
+				<button type="submit" class="btn">Create</button>
+			</form>
+
+		</div>
+	<script src="scripts/script.js"></script>
+	</body>
+</html>
+
+<!--
+A blog website:
+	in the home page will be all the posts
+	click on a post and the user will be redirected to the concent 
+
+	Post: (ID), Title, Author, (Date), content, contact.
+
+
+
+
+-->

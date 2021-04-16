@@ -1,0 +1,39 @@
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+}
+input, textarea{
+    border: 1px solid #E2E2E2;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 40px;
+    width: 30vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #666666;
+}
+
+button{
+    align-self: center;
+    background: #232323;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    color: white;
+}
+textarea{
+    min-height: 300px;
+    resize: none;
+    padding-top: 10px;
+  
+}
+@media(max-width: 800px){
+    input, textarea{
+        width: 60vw;
+    }
+}
