@@ -16,16 +16,7 @@ input, textarea{
     color: #666666;
 }
 
-button{
-    align-self: center;
-    background: #232323;
-    border: none;
-    border-radius: 10px;
-    height: 40px;
-    width: 100px;
-    cursor: pointer;
-    color: white;
-}
+
 textarea{
     min-height: 300px;
     resize: none;

@@ -18,21 +18,18 @@
 .page{
 	align-items: center;
 	display: grid;
-	margin-top: 48px;
-	margin: auto;
-	grid-row-gap: 10vh;
+	margin: 48px auto 0 auto;
+	grid-row-gap: 50px;
 	width: 90vw;
-	margin-bottom: 20px;
+	
 }
 
 /* row-1 */
 .row{
-	margin-top: 100px;	
+	margin-top: 50px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	column-gap: 200px;
-	row-gap: 20px;
+	justify-content: space-between;
 }
 
 .search-box{
@@ -47,7 +44,7 @@
 	align-items: center;
 }
 .search-input{
-	width: 300px;
+	width: 410px;
 	height: 20px;
 	border: none;
 	border-style: none;
@@ -60,6 +57,8 @@
 	padding-right: 10px;
 /*	filter: invert(84%) sepia(4%) saturate(7%) hue-rotate(333deg) brightness(92%) contrast(88%);
 	/*filtes: change svg color, font-> https://codepen.io/sosuke/pen/Pjoqqp*/
+	filter: invert(19%) sepia(6%) saturate(10%) hue-rotate(346deg) brightness(96%) contrast(81%);
+
 }
 .dropdown-btn {
 	font-size: 16px;
@@ -67,10 +66,13 @@
 	background: #FFFFFF;
 	height: 35px;
 	width: 100px;
-
+	color: #000000;
 	border: 0.3px solid #8F8F8F;
 	box-sizing: border-box;
 	border-radius: 10px;
+}
+.dropdown-btn:hover{
+	background: #FFFFFF;
 }
 .dropdown-content{
 display: none;
@@ -94,29 +96,54 @@ background-color: #ddd;
 	display: block;
 }
 .post-list{
-	margin: 0 auto;
 	display: grid; 
 	gap: 2rem;
 	grid-template-columns: repeat(4, 1fr)
 
 }
 .post-box{
-	width: 300px;
 	height: 330px;
 	background: #FFFFFF;
 	border: 0.5px solid #E4E4E4;
 	box-sizing: border-box;
 	border-radius: 20px;
-
+	gap: 1rem;
 	display: flex;
 	flex-direction: column;
 	
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 25px;
+	padding-right: 25px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	cursor: pointer;
+	
 }
+.post-buttons{
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.img-box:hover{
+	background: #F0F2F5;
+
+}
+.img-box{
+    border: 0.5px solid #E1E3E6;
+    border-radius: 5px;
+	background-color: #FFFFFF;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.625rem;
+    text-transform: uppercase;
+    transition: all .2s;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .post-box:hover{
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -124,22 +151,82 @@ background-color: #ddd;
 .post-title{
 	font-size: 1.5rem;
 	align-self: center;
+	cursor: pointer;
+	user-select: none;
 	
 }
 .content-box{
 	display: flex;
 	justify-content: center;
 	text-overflow: ellipsis;
-	margin-bottom: 15px;
-	
 	overflow: hidden;
 	flex-wrap: wrap;
 }
 .p-content{
- text-align: justify;
+	text-align: justify;
+	/*-webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;*/
+   user-select: none;
 }
 .p-date{
 	align-self: center;
+	user-select: none;
+}
+/** Modal **/
+.modal-wrapper{
+	visibility: hidden;
+	opacity: 0;
+}
+.modal-wrapper.on{
+	height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+
+}
+.modal{
+	background: #FFFFFF;
+    border-radius: 0.313rem;
+    padding: 2.5rem; 
+	width: 400px;
+	height: 250px;
+    text-align: center;
+    color: #232323;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 18px;
+}
+.modal footer{
+	display: flex;
+	gap: 30px;
+}
+.modal .modal-title{
+	color: #232323;
+	font-size: 38px;
+	padding: 0;
+}
+.modal .modal-img{
+	filter: invert(19%) sepia(6%) saturate(10%) hue-rotate(346deg) brightness(96%) contrast(81%);
+	width: 48px;
+	height: 48px;
+}
+.modal .btn-cancel{
+	background-color: #E1E3E6;
+	color: #787880;
+}
+.modal .btn-cancel:hover{
+	background: rgb(236, 238, 240);
 }
 
 /*****************/
@@ -156,6 +243,14 @@ background-color: #ddd;
 @media(max-width: 800px){
 	.post-list{
 		grid-template-columns: 1fr;
+		margin: 0 auto;
+	}
+	.post-box{
+		width: 350px;
+	}
+	.row{
+		justify-content: space-evenly;
+		row-gap: 20px;
 	}
 }
 

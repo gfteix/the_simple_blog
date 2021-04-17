@@ -11,6 +11,20 @@ body{
 	background-color: #F1F1F2;
 }
 
+.default-btn{
+    align-self: center;
+    background: #232323;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+.default-btn:hover{
+    background: #191919;
+}
 /* ** Header ** */
 header{
   background-color: #3E3E3E;

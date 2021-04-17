@@ -2,10 +2,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title>My Blog</title>
-		<link rel="stylesheet" href="styles/index.css">
-		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="public/styles/index.css">
+		<link rel="stylesheet" href="public/styles/main.css">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
-	</head>
+	<script src="public/scripts/script.js"></script>
+</head>
 
 	<body>
 		<header class="header">
@@ -29,7 +30,7 @@
 			<div class="row">	
 
 				<div class="filter-box">
-					 <button onclick="showDropdown()" class="dropdown-btn">Filter</button>
+					 <button onmouseover="showDropdown()" class="dropdown-btn">Filter</button>
 					<div class="dropdown-content">
 
 
@@ -43,12 +44,20 @@
 
 				<div class="search-box">
 					<input type="text" id="id_search" name="input" class="search-input" placeholder="Search">
-					<img class="search-img"src="images/lupa.svg"/>
+					<img class="search-img"src="public/images/lupa.svg"/>
 				</div>
 			</div>
 
 			<div class="post-list">
 				<div class="post-box">
+					<div class="post-buttons">
+						<a href="#" class="img-box delete-button">
+							<img src="public/images/edit-24.svg" alt="edit-24">
+						</a>
+						<button class="img-box">
+							<img src="public/images/trash-24.svg" alt="trash-24">
+						</button>
+					</div>
 					<h4 class="post-title">Ethereum</h4>
 					<div class="content-box">
 						<p class="p-content">Ethereum é uma plataforma descentralizada capaz de executar contratos inteligentes e aplicações descentralizadas 
@@ -75,8 +84,24 @@
 	
 				</div>
 			</div>
+
+			
 		</div>
-	<script src="scripts/script.js"></script>
+		<div class="modal-wrapper">
+			<div class="modal">
+				<img src="public/images/trash-48.svg" alt="" class="modal-img">
+				<h3 class="modal-title">Remove Post</h3>
+				<p>Do you really want to delete this post?
+					<br>It will be erased forever.</p>
+				
+				<footer>
+					<button class="btn-cancel">CANCEL</button>
+					<button class="default-btn">REMOVE</button>
+				</footer>
+			</div>
+			<form action="" id="delete-post"></form>
+		</div>
+	
 	</body>
 </html>
 
