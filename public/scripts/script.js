@@ -48,3 +48,16 @@ function showDropdown(){
 
 }
 
+const input = document.querySelector('#input-search')
+const btnSearch = document.querySelector('#btn-search');
+
+
+btnSearch.addEventListener('click', ()=>{
+
+	if(input.value ===""){
+		btnSearch.setAttribute('href', '/');
+	}else{
+
+	btnSearch.setAttribute('href', '?search=' + input.value);
+	}
+})

@@ -8,9 +8,20 @@ class PostController{
     async index(request: Request, response: Response) {
       
         const post = new Post();
+        let allPosts;
+        if(request.query.filter){
+            const value = request.query.filter
+            console.log(request.query.filter)
+            allPosts = await post.filter(value.toString())
 
-        const allPosts = await post.get()
-       
+        }else if(request.query.search){
+            const value = request.query.search
+            allPosts = await post.search(value.toString())
+           
+        }else{
+            allPosts = await post.get()
+        }
+
         return response.status(200).render("index", {posts: allPosts})
     }
     async create_page(request: Request, response: Response){
@@ -32,7 +43,7 @@ class PostController{
         const post = new Post();
         const postId = Number(request.params.id);
 
-        const data = await post.findPost(postId)
+        const data = await post.returnPost(postId)
 
         return response.status(200).render("post", {post: data})
 
@@ -40,7 +51,7 @@ class PostController{
     async show(request: Request, response: Response) {
         const post = new Post();
         const postId = Number(request.params.id);
-        let data = await post.findPost(postId);
+        let data = await post.returnPost(postId);
 
         return response.status(200).render("post-edit", {post: data})
 

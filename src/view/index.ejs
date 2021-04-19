@@ -33,42 +33,22 @@
 					 <button onmouseover="showDropdown()" class="dropdown-btn">Filter</button>
 					<div class="dropdown-content">
 
-
-						<a href="#">Sports</a>	
-						<a href="#">Tecnology</a>
-						<a href="#">Science</a>
-						<a href="#">Movies</a>
+						<a href="/">None</a>	
+						<a href="?filter=Sports">Sports</a>	
+						<a href="?filter=Technology">Technology</a>
+						<a href="?filter=Science">Science</a>
+						<a href="?filter=Movies">Movies</a>
 					</div>
 				</div>
 				<!-- Filter here-->
 
 				<div class="search-box">
-					<input type="text" id="id_search" name="input" class="search-input" placeholder="Search">
-					<img class="search-img"src="/images/lupa.svg"/>
+					<input value="" type="text" id="input-search" name="input" class="search-input" placeholder="Search">
+					<a style="cursor: pointer;" id="btn-search"><img class="search-img"src="/images/lupa.svg"/></a>
 				</div>
 			</div>
 
-			<!--<div class="post-list">
-				<div class="post-box">
-					<div class="post-buttons">
-						<a href="#" class="img-box">
-							<img src="/images/edit-24.svg" alt="edit-24">
-						</a>
-						<button class="img-box delete-button">
-							<img src="/images/trash-24.svg" alt="trash-24">
-						</button>
-					</div>
-					<h4 class="post-title">Ethereum</h4>
-					<div class="content-box">
-						<p class="p-content">Ethereum é uma plataforma descentralizada capaz de executar contratos inteligentes e aplicações descentralizadas 
-						usando a tecnologia blockchain: São aplicações que funcionam exatamente como programadas sem qualquer possibilidade de censura, 
-						fraude ou interferência de terceiros, isso porque o contrato é imutável Ethereum é uma plataforma descentralizada capaz de executar contratos inteligentes e aplicações descentralizadaEthereum é uma plataforma descentralizada capaz de executar contratos inteligentes e aplicações descentralizadaEthereum é uma plataforma descentralizada capaz de executar contratos inteligentes e aplicações descentralizadaEthereum é uma plataforma descentralizada capaz de executar contratos inteligentes e aplicações descentralizada...</p>
-
-					</div>
-					<p class="p-date">16/02/2021</p>
-				</div>
-
-			</div> -->
+			
 			<div class="post-list">
 			<% posts.forEach((post) => { %>
 				<div class="post-box" id="<%=post.id%>">
