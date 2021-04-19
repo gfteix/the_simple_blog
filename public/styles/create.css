@@ -20,6 +20,7 @@ input, textarea{
 textarea{
     min-height: 300px;
     resize: none;
+    text-align: justify;
     padding-top: 10px;
   
 }

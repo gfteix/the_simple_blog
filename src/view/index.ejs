@@ -2,10 +2,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title>My Blog</title>
-		<link rel="stylesheet" href="public/styles/index.css">
-		<link rel="stylesheet" href="public/styles/main.css">
+		<link rel="stylesheet" href="/styles/index.css">
+		<link rel="stylesheet" href="/styles/main.css">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
-	<script src="public/scripts/script.js"></script>
+	
 </head>
 
 	<body>
@@ -15,9 +15,9 @@
 				<h3>the simple blog</h3>
 			</div>
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="create.html">Create</a></li>
-					<li><a href="about.html">About</a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/create">Create</a></li>
+					<li><a href="/about">About</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -44,18 +44,18 @@
 
 				<div class="search-box">
 					<input type="text" id="id_search" name="input" class="search-input" placeholder="Search">
-					<img class="search-img"src="public/images/lupa.svg"/>
+					<img class="search-img"src="/images/lupa.svg"/>
 				</div>
 			</div>
 
-			<div class="post-list">
+			<!--<div class="post-list">
 				<div class="post-box">
 					<div class="post-buttons">
-						<a href="#" class="img-box delete-button">
-							<img src="public/images/edit-24.svg" alt="edit-24">
+						<a href="#" class="img-box">
+							<img src="/images/edit-24.svg" alt="edit-24">
 						</a>
-						<button class="img-box">
-							<img src="public/images/trash-24.svg" alt="trash-24">
+						<button class="img-box delete-button">
+							<img src="/images/trash-24.svg" alt="trash-24">
 						</button>
 					</div>
 					<h4 class="post-title">Ethereum</h4>
@@ -68,51 +68,44 @@
 					<p class="p-date">16/02/2021</p>
 				</div>
 
-				<div class="post-box">
-
+			</div> -->
+			<div class="post-list">
+			<% posts.forEach((post) => { %>
+				<div class="post-box" id="<%=post.id%>">
+					<div class="post-buttons">
+						<a style="text-decoration: none;" href="/post/edit/<%= post.id %> " class="img-box">
+							<img src="/images/edit-24.svg" alt="edit-24">
+						</a>
+						<button class="img-box delete-button">
+							<img src="/images/trash-24.svg" alt="trash-24">
+						</button>
+					</div>
+					<div class="title-box">
+						<a class="post-title" href="/post/<%=post.id%>"><%=post.title%></a>
+					</div>
+					<div class="content-box">
+						<p class="p-content"><%=post.content%>
+					</div>
+					<p class="p-date"><%=post.created_at%></p>
 				</div>
-
-				<div class="post-box">
-	
-				</div>
-
-				<div class="post-box">
-	
-				</div>
-
-				<div class="post-box">
-	
-				</div>
-			</div>
-
+			<% }) %> 
 			
+			</div>
 		</div>
 		<div class="modal-wrapper">
 			<div class="modal">
-				<img src="public/images/trash-48.svg" alt="" class="modal-img">
+				<img src="/images/trash-48.svg" alt="" class="modal-img">
 				<h3 class="modal-title">Remove Post</h3>
 				<p>Do you really want to delete this post?
 					<br>It will be erased forever.</p>
 				
 				<footer>
-					<button class="btn-cancel">CANCEL</button>
-					<button class="default-btn">REMOVE</button>
+					<button id="btn-cancel" class="default-btn btn-cancel">CANCEL</button>
+					<button form="delete-post" class="default-btn">REMOVE</button>
 				</footer>
 			</div>
-			<form action="" id="delete-post"></form>
+			<form method="POST" id="delete-post"></form>
 		</div>
-	
+		<script src="/scripts/script.js"></script>
 	</body>
 </html>
-
-<!--
-A blog website:
-	in the home page will be all the posts
-	click on a post and the user will be redirected to the concent 
-
-	Post: (ID), Title, Author, (Date), content, contact.
-
-
-
-
--->

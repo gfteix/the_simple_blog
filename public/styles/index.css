@@ -110,7 +110,7 @@ background-color: #ddd;
 	gap: 1rem;
 	display: flex;
 	flex-direction: column;
-	
+	max-width: 331.94px;
 	padding-left: 25px;
 	padding-right: 25px;
 	padding-top: 10px;
@@ -153,11 +153,23 @@ background-color: #ddd;
 	align-self: center;
 	cursor: pointer;
 	user-select: none;
+	color: #232323;
+    text-decoration: blink;
+	font-weight: bold;
 	
 }
 .content-box{
 	display: flex;
 	justify-content: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	flex-wrap: wrap;
+	height: 151px
+}
+.title-box{
+	display: flex;
+	text-align: center;
+	justify-content: left;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	flex-wrap: wrap;
@@ -170,6 +182,7 @@ background-color: #ddd;
    -moz-user-select: none;
    -ms-user-select: none;*/
    user-select: none;
+   overflow-wrap: anywhere;
 }
 .p-date{
 	align-self: center;
