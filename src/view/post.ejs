@@ -9,23 +9,16 @@
 	</head>
 
 	<body>
-		<header class="header">
-			<nav class="nav">
-			<div class="logo">
-				<h3>the simple blog</h3>
-			</div>
-				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/create">Create</a></li>
-					<li><a href="/about">About</a></li>
-				</ul>
-			</nav>
-		</header>
+		<%- include('parts/header') %> 
+		
 		<div class="container">
 		
-                <h2 style="overflow-wrap: break-word;"><%= post[0].title %> </h2>
-                <p class="post-date"> <%= post[0].created_at%></p>
-                <p style="overflow-wrap: break-word;"><%= post[0].content %></p>
+                <h2 style="overflow-wrap: break-word;"><%= post[0].title %> </h2>                
+				<p class="post-author"> <%= post[0].author%></p>
+                <div class="post-content">
+					<p style="overflow-wrap: break-word;"><%= post[0].content %></p>
+				</div>
+				<p class="post-date"> <%= post[0].created_at.toLocaleString().split(' ')[0]%></p>
 
 		</div>
 	<script src="scripts/script.js"></script>

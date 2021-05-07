@@ -9,29 +9,19 @@
 	</head>
 
 	<body>
-		<header class="header">
-			<nav class="nav">
-			<div class="logo">
-				<h3>the simple blog</h3>
-			</div>
-				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/create">Create</a></li>
-					<li><a href="/about">About</a></li>
-				</ul>
-			</nav>
-		</header>
+		<%- include('parts/header') %> 
+		
 		<div class="container">
              
-			<form action="/create" method="POST">
-				<input type="text" name="title" placeholder="Title">
-				<textarea type="text" name="content" placeholder="Content"></textarea>
-				<input type="text" name="category" placeholder="Category">
-				<input type="text" name="author" placeholder="Author">
-				<button type="submit" class="default-btn">Save</button>
+			<form id="create-form" >
+				<input id="input-title" type="text" name="title" placeholder="Title" required>
+				<textarea id="input-content" type="text" name="content" placeholder="Content" required></textarea>
+				<input id="input-category" type="text" name="category" placeholder="Category" required>
+				<input id="input-author" type="text" name="author" placeholder="Author" required>
+				<button type="submit" id="btn-create" class="default-btn">Create</button>
 			</form>
 
 		</div>
-	<script src="/scripts/script.js"></script>
+	<script src="/scripts/validations.js"></script>
 	</body>
 </html>

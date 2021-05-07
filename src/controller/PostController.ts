@@ -73,7 +73,6 @@ class PostController{
         const post = new Post();
 
         const postId = Number(request.params.id);
-
         await post.delete(postId)
 
         return response.redirect("/");

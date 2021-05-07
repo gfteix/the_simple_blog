@@ -5,34 +5,17 @@
 		<link rel="stylesheet" href="/styles/index.css">
 		<link rel="stylesheet" href="/styles/main.css">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
-	
+	<script src="/scripts/script.js" defer type="module"></script>
 </head>
 
 	<body>
-		<header class="header">
-			<nav class="nav">
-			<div class="logo">
-				<h3>the simple blog</h3>
-			</div>
-				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/create">Create</a></li>
-					<li><a href="/about">About</a></li>
-				</ul>
-			</nav>
-		</header>
-		<!--this container will be on another html page (post page)-->
-
-	<!--	<div class="container">
-		
-	</div> -->
+		<%- include('parts/header') %> 
 		<div class="page">
 			<div class="row">	
 
 				<div class="filter-box">
-					 <button onmouseover="showDropdown()" class="dropdown-btn">Filter</button>
+					<button class="dropdown-btn">Filter</button>
 					<div class="dropdown-content">
-
 						<a href="/">None</a>	
 						<a href="?filter=Sports">Sports</a>	
 						<a href="?filter=Technology">Technology</a>
@@ -40,7 +23,7 @@
 						<a href="?filter=Movies">Movies</a>
 					</div>
 				</div>
-				<!-- Filter here-->
+		
 
 				<div class="search-box">
 					<input value="" type="text" id="input-search" name="input" class="search-input" placeholder="Search">
@@ -66,7 +49,7 @@
 					<div class="content-box">
 						<p class="p-content"><%=post.content%>
 					</div>
-					<p class="p-date"><%=post.created_at%></p>
+					<p class="p-date"><%=post.created_at.toLocaleString().split(' ')[0]%></p>
 				</div>
 			<% }) %> 
 			
@@ -81,11 +64,11 @@
 				
 				<footer>
 					<button id="btn-cancel" class="default-btn btn-cancel">CANCEL</button>
-					<button form="delete-post" class="default-btn">REMOVE</button>
+					<button type="submit" form="delete-post" class="default-btn">REMOVE</button>
 				</footer>
 			</div>
 			<form method="POST" id="delete-post"></form>
 		</div>
-		<script src="/scripts/script.js"></script>
+		
 	</body>
 </html>

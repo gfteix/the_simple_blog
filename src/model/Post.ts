@@ -4,13 +4,14 @@ class Post{
 
 
     async get(){
-       const data = await db.query("SELECT * FROM post");
-        
+       const data = await db.query("SELECT * FROM post ORDER BY created_at asc");
+       
        return data.rows;
     }   
     async create(title: string, content: string, category: string, author: string){
         await db.query("INSERT INTO post(title, content, category, author) VALUES($1,$2,$3,$4)",
         [title,content,category,author])
+        
 
 
     }

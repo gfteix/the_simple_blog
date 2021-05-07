@@ -164,7 +164,7 @@ background-color: #ddd;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	flex-wrap: wrap;
-	height: 151px
+	height: 160px
 }
 .title-box{
 	display: flex;
@@ -183,6 +183,9 @@ background-color: #ddd;
    -ms-user-select: none;*/
    user-select: none;
    overflow-wrap: anywhere;
+   display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
 }
 .p-date{
 	align-self: center;
@@ -264,6 +267,12 @@ background-color: #ddd;
 	.row{
 		justify-content: space-evenly;
 		row-gap: 20px;
+	}
+	.search-box{
+		width:  250px;
+	}
+	.search-input{
+		width: 200px;
 	}
 }
 

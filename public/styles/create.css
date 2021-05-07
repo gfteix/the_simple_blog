@@ -16,7 +16,10 @@ input, textarea{
     color: #666666;
 }
 
-
+input[data-state="invalid"] {
+    border-color: hsl(0, 76%, 50%);;
+  }
+  
 textarea{
     min-height: 300px;
     resize: none;

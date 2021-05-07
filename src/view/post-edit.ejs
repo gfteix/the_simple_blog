@@ -9,18 +9,9 @@
 	</head>
 
 	<body>
-		<header class="header">
-			<nav class="nav">
-			<div class="logo">
-				<h3>the simple blog</h3>
-			</div>
-				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/create">Create</a></li>
-					<li><a href="/about">About</a></li>
-				</ul>
-			</nav>
-		</header>
+		
+		<%- include('parts/header') %> 
+
 		<div class="container">
              
 			<form action="/post/edit/<%=post[0].id%> " method="POST">
