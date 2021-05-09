@@ -75,7 +75,7 @@
 	background: #FFFFFF;
 }
 .dropdown-content{
-display: none;
+  display: none;
   position: absolute;
   background-color: #f6f6f6;
   min-width: 230px;
@@ -83,7 +83,7 @@ display: none;
   z-index: 1;
 }
 .dropdown-content a{
- color: black;
+  color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -91,8 +91,7 @@ display: none;
 .dropdown-content a:hover {
 background-color: #ddd;
 }
-.show
-{
+.show{
 	display: block;
 }
 .post-list{
@@ -111,10 +110,8 @@ background-color: #ddd;
 	display: flex;
 	flex-direction: column;
 	max-width: 331.94px;
-	padding-left: 25px;
-	padding-right: 25px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding: 10px 25px;
+
 	
 }
 .post-buttons{
@@ -184,8 +181,8 @@ background-color: #ddd;
    user-select: none;
    overflow-wrap: anywhere;
    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 8;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 8;
 }
 .p-date{
 	align-self: center;

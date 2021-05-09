@@ -33,8 +33,6 @@ header{
   right: 0;
   left: 0;
 }
-
-
 ul{
 	list-style-type: none;
 	margin: 0;
@@ -52,7 +50,6 @@ li{
 	display: inline-block;
 	text-align: center;
 }
-
 li a{
 	display: block;
 	color: white;
@@ -63,7 +60,6 @@ li a{
 li a:hover{
 	background-color: #111;
 }
-
 .container{
 	background-color: white;
     width: 50vw;
@@ -86,6 +82,5 @@ li a:hover{
 @media(max-width: 800px){
 	.container{
         width: 80vw;
-        
     }
 }
