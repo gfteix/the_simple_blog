@@ -5,7 +5,7 @@ form{
     row-gap: 1rem;
     align-items: center;
 }
-input, textarea{
+input, textarea, select{
     border: 1px solid #E2E2E2;
     box-sizing: border-box;
     border-radius: 10px;
@@ -14,6 +14,7 @@ input, textarea{
     padding-left: 10px;
     padding-right: 10px;
     color: #666666;
+    background-color: white;
 }
 
 input[data-state="invalid"] {
@@ -28,7 +29,8 @@ textarea{
   
 }
 @media(max-width: 800px){
-    input, textarea{
+    input, textarea, select{
         width: 60vw;
+       
     }
 }

@@ -16,9 +16,17 @@
 			<form id="create-form" >
 				<input id="input-title" type="text" name="title" placeholder="Title" required>
 				<textarea id="input-content" type="text" name="content" placeholder="Content" required></textarea>
-				<input id="input-category" type="text" name="category" placeholder="Category" required>
+				<select name="category" id="input-category" required>
+					<option value="Technology">Technology</option>
+					<option value="Sports">Sports</option>
+					<option value="Science">Science</option>
+					<option value="Movies">Movies</option>
+				</select>
+				
 				<input id="input-author" type="text" name="author" placeholder="Author" required>
+				
 				<button type="submit" id="btn-create" class="default-btn">Create</button>
+				
 			</form>
 
 		</div>
