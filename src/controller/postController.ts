@@ -2,8 +2,6 @@ import {Request, Response} from "express";
 import {Post} from "../model/post";
 import * as PostService from "../service/postService";
 
-const db = require("../database/database");
-
 class PostController{
 
     async index(request: Request, response: Response) {
