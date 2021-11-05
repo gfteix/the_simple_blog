@@ -13,12 +13,12 @@
 		
 		<div class="container">
 		
-                <h2 style="overflow-wrap: break-word;"><%= post[0].title %> </h2>                
-				<p class="post-author"> <%= post[0].author%></p>
+                <h2 style="overflow-wrap: break-word;"><%= post.title %> </h2>                
+				<p class="post-author"> <%= post.author%></p>
                 <div class="post-content">
-					<p style="overflow-wrap: break-word;"><%= post[0].content %></p>
+					<p style="overflow-wrap: break-word;"><%= post.content %></p>
 				</div>
-				<p class="post-date"> <%= post[0].created_at.toLocaleString().split(' ')[0]%></p>
+				<p class="post-date"> <%= post.created_at.toLocaleString().split(' ')[0]%></p>
 
 		</div>
 	<script src="scripts/script.js"></script>

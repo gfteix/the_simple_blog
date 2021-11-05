@@ -7,7 +7,9 @@ const db = require("../database/database");
 class PostController{
 
     async index(request: Request, response: Response) {
+     
         try{
+
             let posts: Post[] = [];
             if(request.query.filter){
                 const value = request.query.filter
@@ -32,24 +34,43 @@ class PostController{
     async create(request: Request, response: Response) {
         try{
             const post = request.body as Post;
+            console.log(post);
             await PostService.create(post);
             return response.status(200).redirect("/");
         }catch(error){
             return response.status(500).send(error);
         }
     }
-    async getPost(request: Request, response: Response) {
+    async editPost(request: Request, response: Response){
         try{
             const postId = Number(request.params.id);
-            const post: Post = await PostService.getPost(postId)
-            return response.status(200).render("post", {post: post})
+            const posts: Post[] = await PostService.getPost(postId)
+            return response.status(200).render("post-edit", {post: posts[0]})
+        }catch(error){
+            return response.status(500).send(error);
+        }   
+        
+    }
+    async post(request: Request, response: Response) {
+        try{
+            const postId = Number(request.params.id);
+            const posts: Post[] = await PostService.getPost(postId)
+            console.log(posts);
+            return response.status(200).render("post", {post: posts[0]})
         }catch(error){
             return response.status(500).send(error);
         }
     }
     async update(request: Request, response: Response) {
         try{
-            const post: Post = request.body as Post;    
+            const post: Post = {
+                id: Number(request.params.id),
+                title: request.body.title,
+                content: request.body.content,
+                category: request.body.category,
+                author: request.body.author
+            }  
+            console.log(post); 
             await PostService.update(post)
             return response.status(200).redirect("/");
         }catch(error){

@@ -14,11 +14,11 @@
 
 		<div class="container">
              
-			<form action="/post/edit/<%=post[0].id%> " method="POST">
-				<input type="text" name="title" placeholder="Title" value="<%=post[0].title%>">
-				<textarea type="text" name="content" placeholder="Content"><%=post[0].content%></textarea>
-				<input type="text" name="category" placeholder="Category" value="<%=post[0].category%>">
-				<input type="text" name="author" placeholder="Author" value="<%=post[0].author%>">
+			<form action="/post/edit/<%=post.id%> " method="POST">
+				<input type="text" name="title" placeholder="Title" value="<%=post.title%>">
+				<textarea type="text" name="content" placeholder="Content"><%=post.content%></textarea>
+				<input type="text" name="category" placeholder="Category" value="<%=post.category%>">
+				<input type="text" name="author" placeholder="Author" value="<%=post.author%>">
 				<button type="submit" class="default-btn">Save</button>
 			</form>
 
